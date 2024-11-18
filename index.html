@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Sentuo Oil Salary Calculator</h1>
+        <form id="salary-form">
+            <!-- Basic Salary Dropdown -->
+            <label for="basic-salary">Basic Salary:</label>
+            <select id="basic-salary">
+                <option value="1300">1300</option>
+                <option value="1400">1400</option>
+                <option value="1500">1500</option>
+            </select>
+
+            <!-- Work Days Input -->
+            <input type="number" id="work-days" placeholder="Enter Work Days" required>
+
+            <!-- Overtime Days Input -->
+            <input type="number" id="overtime-days" placeholder="Enter Overtime Days" required>
+
+            <!-- Overtime Hours Input -->
+            <input type="number" id="overtime-hours" placeholder="Enter Overtime Hours" required>
+
+            <!-- Allowance & Bonus Input -->
+            <input type="number" id="allowance-bonus" placeholder="Enter Allowance & Bonus" required>
+
+            <!-- Appraisal Dropdown -->
+            <label for="appraisal">Choose Appraisal Score:</label>
+            <select id="appraisal">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+
+            <button type="button" onclick="calculateSalary()">Calculate Salary</button>
+        </form>
+
+        <!-- Display result -->
+        <div id="result" class="result"></div>
+    </div>
+
+    <div class="image-side">
+        <img src="data:image/png;base64,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" alt="Side Image" />
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong></p>
+            <p>This web application is intended for informational purposes only. The results calculated by this tool are estimates and may not reflect the exact amount to be received. This app does not take into account all possible deductions or allowances that may apply in specific cases. Please consult HR for accurate salary calculations.</p>
+            <p>The creator of this web application do not accept any liability for any damages, losses, or inaccuracies arising from the use of this tool. I do not guarantee the correctness or completeness of the calculations.</p>
+            <p>Disclaimer: This web application is provided free of charge for non-commercial use only. It is not intended for profit-making purposes. The logo and trademark used in this application are the property of Sentuo. The use of this logo is strictly for informational purposes and does not imply any endorsement or affiliation with the employer.</p>
+            <p><strong>Created by:</strong> Joel from the MOP Department</p>
+            <p></p>
+            <p style="color: red;">Shout out to Mayboy!!!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
