@@ -1,0 +1,86 @@
+/* Dark Mode Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text for dark mode */
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50; /* Bright green for emphasis */
+    margin-bottom: 20px;
+}
+
+.container {
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333; /* Dark input background */
+    color: #fff; /* Light text */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9; /* Slight transparency for hover effect */
+}
+
+button:nth-of-type(1) {
+    background-color: #4CAF50; /* Green for calculate button */
+    color: #fff;
+}
+
+.clear-btn {
+    background-color: #f44336; /* Red for clear button */
+    color: #fff;
+    margin-top: 10px;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1E1E1E; /* Darker result box */
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb; /* Slightly dimmer for message text */
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.message p {
+    margin: 0;
+    font-style: italic;
+    color: #999;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentuo Oil Salary Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentuo Oil Salary Calculator</h1>
+        <div class="content">
+            <form>
+                <!-- Basic Salary Dropdown -->
+                <label for="basic-salary">Basic Salary:</label>
+                <select id="basic-salary">
+                    <option value="800">800</option>
+                    <option value="900">900</option>
+                    <option value="1000">1000</option>
+                    <option value="1100">1100</option>
+                    <option value="1200">1200</option>
+                    <option value="1300">1300</option>
+                    <option value="1400">1400</option>
+                    <option value="1500">1500</option>
+                </select>
+
+                <!-- Work Days Input -->
+                <input type="number" id="work-days" placeholder="Enter Work Days" required>
+
+                <!-- Overtime Days Input -->
+                <input type="number" id="overtime-days" placeholder="Enter Overtime Days" required>
+
+                <!-- Overtime Hours Input -->
+                <input type="number" id="overtime-hours" placeholder="Enter Overtime Hours" required>
+
+                <!-- Allowance & Bonus Input -->
+                <input type="number" id="allowance-bonus" placeholder="Enter Allowance & Bonus" required>
+
+                <!-- Appraisal Dropdown -->
+                <label for="appraisal">Choose Appraisal Score:</label>
+                <select id="appraisal">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+
+                <button type="button" onclick="calculateSalary()">Calculate Salary</button>
+                <button type="button" class="clear-btn" onclick="clearFields()">Clear</button>
+            </form>
+
+            <!-- Result Section -->
+            <div class="result" id="result"></div>
+
+            <!-- Message Section -->
+            <div class="message">
+                <p>Sentuo Oil refinery sucks so don't panic. If you have high hopes, forgerrit. If you don't understand your salary, you are not alone. It's normal to not understand.</p>
+                <p><p>
+                <p>created by Joel. Operation Break Sentuo chains 2025<p>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
